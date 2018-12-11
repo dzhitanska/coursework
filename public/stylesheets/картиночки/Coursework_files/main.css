@@ -1,0 +1,381 @@
+/*@font-face {
+  font-family: "Prompt" ;
+  src: url('C:\Users\Dasha\Desktop\Курсач\шрифты\Prompt-MediumItalic.ttf');
+
+}*/
+body{
+  margin: 0;
+}
+
+div.top{
+  background-image: url("картиночки/2.jpg");
+  /*padding-bottom: 200px;*/
+  background-size: cover;
+  background-repeat: no-repeat; 
+  /*margin-top: -20px;*/
+}
+div.title {
+  /*margin-top: : 100px;*/
+  padding-left: 200px;
+  font: 30pt sans-serif;
+  color: #ffffff;
+
+}
+h1{
+  padding-top: 200px;
+}
+img.logo {
+  margin-left: 40px;
+  margin-top: -15px;
+  position: absolute;
+}
+
+
+
+ul.block_2 {
+  font: 14pt sans-serif;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  overflow: auto;
+  text-align: justify;
+  margin-left: 20px;
+}
+
+ul.block_2 li {
+  list-style: none;
+  display: list-item;
+  line-height: 35px;
+
+}
+
+nav.menu {
+    width: 200px;
+    background: #AD0D5E;
+    padding: 10px;
+    float: left ;
+    position: absolute;
+    right: 60px;
+    /*top: -10px;*/
+}
+#news{
+  position: relative;
+  height: 550px;
+}
+
+
+
+article.News_div{
+  display: block;
+  width: 850px;
+  height: auto;
+  background-color:#FFFFFF ;
+  padding: 40px;
+  position: absolute;
+  left: 300px;
+  top: -100px;
+}
+
+article.News_div1{
+  display: block;
+  width: 800px;
+  background: transparent;
+  position: absolute;
+  left: 360px;
+  top:160px;
+  text-align: left;
+}
+
+img.inews {
+  float : left;
+  margin: -7px 7px 0px 0px;
+  margin-left: -50px;
+  margin-top: -140px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #a83f5c
+}
+
+
+
+img.inews_2{
+  float: right;
+  text-align: right;
+  margin: -60px 0px 0px 7px;
+  margin-right: -170px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #a83f5c
+}
+.text {
+  margin-top: 150px;
+}
+
+
+
+
+
+
+div.trains{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+ }
+
+div.main_trains {
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-image: url("картиночки/gym.jpg"); 
+  height: 1000px;
+  margin-top: 100px;
+}
+
+div.trains1{
+  padding-top: 40px;
+}
+h1.trains_h1{
+  text-align: center;
+  font: 37pt sans-serif;
+  font-style: italic;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+p.fg {
+  font-size: 14pt;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+}
+
+h4{
+  text-align: center;
+  font: 20px serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+
+
+
+div.img {
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+div.img1 {
+   background: url('картиночки/yogapose1.png') ;
+}
+div.img1:hover{
+  background: url('картиночки/yogapose2.svg');
+}
+
+div.img2 {
+  background: url('картиночки/pulse.png') ;
+}
+div.img2:hover{
+  background: url('картиночки/pulse1.svg');
+}
+
+div.img3 {
+  background: url('картиночки/dumbbell.png') ;
+}
+div.img3:hover{
+  background: url('картиночки/dumbbell1.png');
+}
+
+
+
+
+
+
+
+
+div.main_trainers{
+  background-image: url("картиночки/new-york-city.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  height: 880px;
+  margin-top: 250px;
+
+}
+div.trainers_blocks{
+  padding-top: 2px;
+}
+h2.trainers {
+  text-align: center;
+  font: 40pt sans-serif;
+  font-style: italic;
+  color: white;
+  font-weight: bold;
+}
+
+
+.wrapper {
+	height: 600px;
+	margin: 50px auto 0;
+  position: relative;
+	width: 600px;
+}
+
+.slider {
+	background-color: #ddd;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+	-webkit-box-shadow: 0 0 0px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 0 0px rgba(0, 0, 0, .5);
+	-o-box-shadow: 0 0 0px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 0px rgba(0, 0, 0, .5);
+}
+.wrapper > input {
+	display: none;
+}
+.slides {
+	height: inherit;
+	position: absolute;
+	width: inherit;
+  border: 1px black;
+  z-index: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+.slide1 { background-image: url('картиночки/4.png'); ; }
+.slide2 { background-image: url('картиночки/3.png'); ; }
+.slide3 { background-image: url('картиночки/4.png'); ;}
+.slide4 { background-image: url('картиночки/3.png'); ;}
+.slide5 { background-image: url('картиночки/4.png'); ;}
+
+.wrapper .controls {
+	margin-left: 30%;
+	position: absolute;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+  -webkit-transition: background ease-in-out .5s;
+	-moz-transition: background ease-in-out .5s;
+	-o-transition: background ease-in-out .5s;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+	background: #ddd;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	opacity: 1;
+	z-index: 1;
+  -webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+p.text1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  font-size: 20px;
+  height: 610px;
+  color: #fff;
+  transition: .5s ease;
+}
+
+p.text1:hover {
+  margin-top: -10px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+}
+
+.form1 {
+  font: 16pt sans-serif;
+  margin-top: 7%;
+  width: 700px;
+  height: 600px;
+  color: white;
+}
+div.block_form{
+  display: flex;
+  justify-content: space-between;
+}
+textarea {
+  width: 400px;
+  height: 30px;
+}
+
+fieldset {
+  border: none;
+}
+
+
+
+footer {
+  background-image: url("картиночки/new-york-city.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 127px;
+  padding: 10px;
+  width: 80%;
+  font: 14pt sans-serif;
+  color: white;
+}
+img.contacts_1 {
+  float : left;
+  margin: -5px 7px 0px 7px;
+}
+

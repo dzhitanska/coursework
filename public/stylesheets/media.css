@@ -1,0 +1,44 @@
+@media screen and (max-width: 1025px) {
+  div.title {
+    padding-left: 85px;
+    font-size: 25pt;
+  }
+  article.news_div{
+  	display: none;
+  }
+  article.news_div1{
+  	display: none;
+  }
+  img.service_img{
+  	width: 370px;
+  }
+  fieldset{
+    font-size: 13pt;
+    padding-left: 0px;
+  }
+  form.form1{
+    margin-left: 4px;
+  }
+  form.form2{
+    margin-left: -40px;
+  }
+  div.block_register{
+    margin-top: 100px;
+  }
+  div.list {
+    font-size: 12pt;
+  }
+  div.contacts {
+    font-size: 12pt;
+  }
+  div.main_trains{
+    margin-top: -500px;
+  }
+  div.footer_text{
+    width: 300px;
+    margin-top: auto;
+  }
+  div.up{
+    right: 60px;
+  }
+}
