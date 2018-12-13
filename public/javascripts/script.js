@@ -34,3 +34,11 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 1300);
     });
 });
+
+// $(document).ready(function(){
+//     $("#button1").click( function(){
+//        location.reload();
+//     });
+// });
+
+

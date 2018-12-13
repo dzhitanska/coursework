@@ -47,9 +47,7 @@ div.up{
 div.up:hover{
   opacity: 1;
 }
-input {
-  border-radius: 5px;
-}
+
 select {
   border-radius: 5px;
 }
@@ -401,25 +399,43 @@ fieldset {
 /*Регистрация*/
 div.block_register{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 div.service_image{
-  margin-top: 190px;
+  margin-top: 200px;
 }
 
 div.checkbox{
   display: flex;
   justify-content: space-around;
-  width: 80%;
+  width: 110%;
 }
 input.cost{
   border:none;
 }
 form#register{
-  padding-top: 100px;
+  padding-top: 150px;
   font-size: 20px;
 }
+form#register2{
+  padding-top: 200px;
+  /*margin-left: -20px;*/
+  /*padding-right: 40px;*/
+  font-size: 20px;
+}
+input#but{
+  align-items: center;
+  margin:0px 150px;
+  font-size: 22px;
+ }
+ input.reg{
+  border:none;
+  border-bottom: 1px solid black;
+  outline: none; 
+  background: transparent;
+  font-size:20px;
+ }
 
 
 /*Футер*/

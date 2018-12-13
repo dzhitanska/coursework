@@ -129,92 +129,58 @@ block content
 							label(for='slide3')
 							label(for='slide4')
 							label(for='slide5')
-					form.form1(action='index.html', method='post')
+					form.form1(action='/registertrainer', method='post' id='formt')
 						h2 You can join us!
 						fieldset
 							p
-								label Name: 
-								input(type='text', required='')
+								
+								input(class="reg", type='text', required='', name='Name' placeholder="Name")
 							p
-								label Surname: 
-								input(type='text', required='')
+								
+								input(class="reg", type='text', required='', name='Surname' placeholder="Surname")
 							p
-								label Email: 
-								input(type='email', required='')
+								
+								input(class="reg", type='email', required='', name='Email' placeholder="E-mail")
 							p
-								label Telephone: 
-								input(type='tel', required='')
-							p
-								label
-									input(type='radio')
-									| I have experience in working as a coach
+								
+								input(class="reg", type='tel', required='', name='Telephone' placeholder="Telephone")
 							p
 								label Tell us about yourself: 
 							p
-								textarea(name='comment')
+								textarea(name='Abouttrainer' plaseholder="Tell us about yourself")
 							p
 							p
-								button(type='submit', name='button') I want to be a trainer
+								button(type='submit', name='button', id="button1") I want to be a trainer
 								button(type='reset', name='button') Reset
+							script.
+								document.getElementById("formt").onsubmit = function() {myFunction()};
+								function myFunction() {
+									alert('Your form was send!')
+								}
+																
 		.block_register
-			form#register.form2(action='index.html', method='post')
+			form#register.form2(action='/registeruser', method='post')
 				h2 Register here!
 				fieldset
 					p
-						label Name: 
-						input(type='text', required='')
+						//- label Name: 
+						input(class="reg", type='text', required='', name='username' placeholder="Name")
 					p
-						label Surname: 
-						input(type='text', required='')
+						//- label Surname: 
+						input(class="reg", type='text', required='', name='usersurname' placeholder="Surname")
 					p
-						label Email: 
-						input(type='email', required='')
+						//- label Email: 
+						input(class="reg", type='email', required='', , name='useremail' placeholder="E-mail")
 					p
-						label Telephone: 
-						input(type='tel', required='')
+						//- label Telephone: 
+						input(class="reg", type='tel', required='', name='usertelephone' placeholder="Telephone")
+					
+					
 					p
-						legend Choose service(s):
-					.checkbox
-						div
-							p
-								label(title='400UAH')
-								input#1(type='checkbox')
-								| Gym
-							p
-								label(title='500UAH')
-								input#2(type='checkbox')
-								| Massage
-							p
-								label(title='300UAH')
-								input#3(type='checkbox')
-								| Fight club
-							p
-								label(title='500UAH')
-								input#4(type='checkbox')
-								| Cosmetology
-						div
-							p
-								label(title='550UAH')
-								input#5(type='checkbox')
-								| Yoga
-							p
-								label(title='550UAH')
-								input#6(type='checkbox')
-								| Aerobics
-							p
-								label(title='200UAH')
-								input#7(type='checkbox')
-								| Sauna
-							p
-								label(title='200UAH')
-								input#8(type='checkbox')
-								| Fitness food
+						label Choose trainer  
+					
 					p
-						label
-							input(type='radio')
-							| Want to work with a trainer
-						p
-						select
+						select(name='trainers')
 							each item in results
 								option #{item.Trainer}
 							//- option Not choosen
@@ -223,17 +189,69 @@ block content
 							//- option Gustem Dron
 							//- option Kirill Korel
 							//- option Olya Tarasova
+					//- p
+					//- 	label Password for your account: 
+					//- 	input(type='password', required='')
+					
+					
+			form#register2.form2(action='/registeruser2', method='post')
+				p
+					legend 
+						|Choose service(s) for 
+						br 
+						|your season ticket:
+				.checkbox(name="serv")
 					p
-						label Password for your account: 
-						input(type='password', required='')
-					p
-						label
-						| Cost of your abonement only:  
-						input.cost(readonly='')
-					p
-						button(type='submit', name='button') Send form
+						div
+							p
+								label(title='400UAH')
+								input#service(type='checkbox' name='service', value="1" )
+								| Gym
+							p
+								label(title='500UAH')
+								input#service(type='checkbox' name='service', value="2" )
+								| Massage
+							p
+								label(title='300UAH')
+								input#service(type='checkbox' name='service', value="3" )
+								| Fight club
+							p
+								label(title='500UAH')
+								input#service(type='checkbox' name='service', value="4" )
+								| Cosmetology
+						div
+							p
+								label(title='550UAH')
+								input#service(type='checkbox' name='service', value="5" )
+								| Yoga
+							p
+								label(title='550UAH')
+								input#service(type='checkbox' name='service', value="6" )
+								| Aerobics
+							p
+								label(title='200UAH')
+								input#service(type='checkbox' name='service', value="7")
+								| Sauna
+							p
+								label(title='200UAH')
+								input#service(type='checkbox' name='service', value="8")
+								| Fitness food
+				p
+					label
+					| Cost of your abonement only:  
+					input.cost(readonly='')
+						
 			.service_image
 				img.service_img(src='images/services.jpg')
+		input(type="button" value="Send form" onClick="submitForms()" id="but")
+		script. 
+			submitForms = function(){
+				
+				setTimeout(function () {
+					document.getElementById("register2").submit();
+				}, 1000);
+				document.getElementById("register").submit();
+			}
 	footer
 		#contacts.footer_blocks
 			.footer_text

@@ -9,7 +9,16 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+
+  
+// создаем парсер для данных application/x-www-form-urlencoded
+
+  
+
 // view engine setup
+
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
