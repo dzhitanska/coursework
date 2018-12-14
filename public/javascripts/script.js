@@ -35,10 +35,8 @@ $(document).ready(function(){
     });
 });
 
-// $(document).ready(function(){
-//     $("#button1").click( function(){
-//        location.reload();
-//     });
-// });
 
+                
+
+    
 

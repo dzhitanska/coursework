@@ -42,7 +42,7 @@ router.post("/registeruser", function (req, res, next) {
     return console.error(error.message);
   		}
 		console.log('Add to BD ');
-		// res.redirect("/");
+		
 	})
 });
 
@@ -59,9 +59,24 @@ var len = (Services1).length
 					console.log('Add to BD ');
 				});
 	}
-	res.redirect("/");
+			
+	res.redirect('/cost')
+			
 });
 
 
+router.get('/cost', function(req, res, next) {
+	
+	connection.query('SELECT Cost_of_abonement() AS Cost', function(error, results,fields){
+		// var cost = results;
+		console.log(results);
+		if(error) throw error
+		res.render('index2',{
+			results
+		});
+	});
+
+
+});
 
 module.exports = router;
