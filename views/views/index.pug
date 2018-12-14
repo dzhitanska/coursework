@@ -1,0 +1,291 @@
+extends layout
+
+block content
+	#totop
+		a.totop(href='#top')
+			.up.up2
+		#top.top
+			a(href='')
+				img.logo(src='/images/спортибухло.svg', width='170', height='170', alt='Logo')
+			nav#menu.menu
+				p
+					ul.block_2
+						li
+							a(href='#top') Home
+						li
+							a(href='#news1') Recent news
+						li
+							a(href='#trains') Trains
+						li
+							a(href='#team') Our team
+						li
+							a(href='#register') Registration
+						li
+							a(href='#contacts') Contact us
+					p
+			.title
+				h1 Build your body
+				p 
+					|Live in your rhythm!
+					br
+					|Be fit!
+		#news
+			article.news_div
+				p
+					img#news1.inews(src='images/yoga1.jpg', align='left', alt='Yoga')
+				p
+					h2 Why yoga is good for health?
+				p
+					| Yoga is a total mind-body workout that combines strengthening and stretching poses with deep
+					br
+					|  breathing and meditation or relaxation.
+				a(href="https://www.webmd.com/fitness-exercise/a-z/yoga-workouts")
+					button.b
+						| Know more
+			article.news_div1
+				p
+					img.inews_2(src='images/cardio1.jpg', align='right', alt='Cardio')
+				p.text
+					h2 Cardio: Facts and Myths
+					|           All cardio and no strength isn't just boring, it may cause you to burn fewer calories overall. Strength training builds lean muscle mass, which both increases your metabolism and decreases fat. So the more muscle you build, the more calories you burn on a day-to-day basis. Here's all the science you need to know about burning fat and building muscle.
+				a(href='#')
+					button.b
+						| Know more
+		.main_trains
+				h2#trains.trains_h2 Our trains
+					.trains
+						figure
+							.img.img1
+							figcaption
+							h4 Yoga
+							p.fg
+								|Yoga is a great activity for you if you have diabetes, high blood pressure, 
+								br
+								|high cholesterol, or heart disease. It gives you mind-body awareness.  
+							.podpis
+								a(href='#')
+									button.b
+										| Know more
+						figure
+							.img.img2
+							figcaption
+							h4 Cardio
+							p.fg
+								|Cardio exercise is one of the most important things you can do for your body, 
+								br
+								|whether you want to lose weight, burn fat, or generally improve your health. 
+							.podpis
+								a(href='#')
+									button.b
+										| Know more
+						figure
+							.img.img3
+							figcaption
+							h4 Body sculpting
+							p.fg
+								|The muscle building process is not as complicated as it's made out to be. 
+								br
+								|Here are the basics that will help you get on track and maximizing your progress.
+							.podpis
+								a(href='#')
+									button.b
+										| Know more
+		.main_trainers
+			.trainers_blocks
+				h2#team.trainers Our team
+				.block_form
+					.wrapper
+						input#slide1(type='radio', name='point', checked='')
+						input#slide2(type='radio', name='point')
+						input#slide3(type='radio', name='point')
+						input#slide4(type='radio', name='point')
+						input#slide5(type='radio', name='point')
+						.slider
+							.slides.slide1
+								p.text1
+									| Timur Malik 
+									br
+									| Personal trainer
+							.slides.slide2
+								p.text1
+									| Vika Naumenko 
+									br
+									| Personal trainer
+							.slides.slide3
+								p.text1
+									| Andrey Gor
+									br
+									| Personal trainer
+							.slides.slide4
+									| Valya Trener 
+									br
+									| Personal trainer
+							.slides.slide5
+								p.text1
+									| Sasha Sapel 
+									br
+									| Personal trainer
+						.controls
+							label(for='slide1')
+							label(for='slide2')
+							label(for='slide3')
+							label(for='slide4')
+							label(for='slide5')
+					form.form1(action='/registertrainer', method='post' id='formt')
+						h2 You can join us!
+						fieldset
+							p
+								
+								input(class="reg", type='text', required='', name='Name' placeholder="Name")
+							p
+								
+								input(class="reg", type='text', required='', name='Surname' placeholder="Surname")
+							p
+								
+								input(class="reg", type='email', required='', name='Email' placeholder="E-mail")
+							p
+								
+								input(class="reg", type='tel', required='', name='Telephone' placeholder="Telephone")
+							p
+								label Tell us about yourself: 
+							p
+								textarea(name='Abouttrainer' plaseholder="Tell us about yourself")
+							p
+							p
+								button(type='submit', name='button', id="button1") I want to be a trainer
+							p
+								button(type='reset', name='button') Reset
+							script.
+								document.getElementById("formt").onsubmit = function() {myFunction()};
+								function myFunction() {
+									alert('Your form was send!')
+								}
+																
+		.block_register
+			form#register.form2(action='/registeruser', method='post')
+				h2 Register here!
+				fieldset
+					p
+						//- label Name: 
+						input(class="reg", type='text', required='', name='username' placeholder="Name")
+					p
+						//- label Surname: 
+						input(class="reg", type='text', required='', name='usersurname' placeholder="Surname")
+					p
+						//- label Email: 
+						input(class="reg", type='email', required='', , name='useremail' placeholder="E-mail")
+					p
+						//- label Telephone: 
+						input(class="reg", type='tel', required='', name='usertelephone' placeholder="Telephone")
+					
+					
+					p
+						label Choose trainer  
+					
+					p
+						select(name='trainers')
+							each item in results
+								option #{item.Trainer}
+							
+					
+					
+			form#register2.form2(action='/registeruser2', method='post')
+				p
+					legend 
+						|Choose service(s) for 
+						br 
+						|your season ticket:
+				.checkbox(name="serv")
+					p
+						div
+							p
+								label(title='400UAH')
+								input#service(type='checkbox' name='service', value="1" )
+								| Gym
+							p
+								label(title='500UAH')
+								input#service(type='checkbox' name='service', value="2" )
+								| Massage
+							p
+								label(title='300UAH')
+								input#service(type='checkbox' name='service', value="3" )
+								| Fight club
+							p
+								label(title='500UAH')
+								input#service(type='checkbox' name='service', value="4" )
+								| Cosmetology
+						div
+							p
+								label(title='550UAH')
+								input#service(type='checkbox' name='service', value="5" )
+								| Yoga
+							p
+								label(title='550UAH')
+								input#service(type='checkbox' name='service', value="6" )
+								| Aerobics
+							p
+								label(title='200UAH')
+								input#service(type='checkbox' name='service', value="7")
+								| Sauna
+							p
+								label(title='200UAH')
+								input#service(type='checkbox' name='service', value="8")
+								| Fitness food
+				
+						
+			.service_image
+				img.service_img(src='images/services.jpg')
+		input(type="button" value="Send form" onClick="submitForms()" id="but")
+		script. 
+			submitForms = function(){
+				setTimeout(function () {
+					document.getElementById("register2").submit();
+				}, 1000);
+				document.getElementById("register").submit();
+				}
+				
+	footer
+		#contacts.footer_blocks
+			.footer_text
+				img.logo1(src='images/спортибухло.svg', width='140', height='140', alt='Logo')
+				.text2
+					|Fitness does not only refer to being physically fit, but also refers to a person’s mental state as well. If a|person is physically fit, but mentally unwell or troubled, he or she will not be able to function optimally. |Mental fitness can only be achieved if your body is functioning well. You can help relax your own mind and |eliminate stresses by exercising regularly and eating right.
+			#list.list
+					p.title1 Quick links
+						p
+							ul.block_1
+								li
+									a(href='#top') Home
+								li
+									a(href='#news1') Recent news
+								li
+									a(href='#trains') Trains
+								li
+									a(href='#team') Our team
+								li
+									a(href='#register') Registration
+								li
+									a(href='#contacts') Contact us
+			.contacts
+					p.title1 Contacts us
+						p
+							ul.block_1
+								li
+									div
+										p
+											img.contacts_1(src='images/message.svg', width='30', height='30', alt='Mail')
+											|                     dasha.zhitanska@gmail.com
+								li
+									div
+										p
+											img.contacts_1(src='images/phone-call.svg', width='30', height='30', alt='Tel')
+											|                     38(097)037-33-03
+								li
+									div
+										p
+											img.contacts_1(src='images/clock.svg', width='30', height='30', alt='CLock')
+											|                     Mon - Sat : 9AM - 6PM
+							
+		p.by © Made by DZ
+	
+

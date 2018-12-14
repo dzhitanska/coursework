@@ -1,0 +1,206 @@
+extends layout2
+
+block content
+	#toto
+		a.totop(href='#top')
+			.up.up2
+		
+		#top.top
+			a(href='')
+				img.logo(src='/images/спортибухло.svg', width='170', height='170', alt='Logo')
+			nav#menu.menu
+				p
+					ul.block_2
+						li
+							a(href='#top') Home
+						li
+							a(href='#news1') Recent news
+						li
+							a(href='#trains') Trains
+						li
+							a(href='#team') Our team
+						li
+							a(href='#contacts') Contact us
+					p
+			.title
+				h1._2 COST OF YOUR ABONEMENT 
+					p #{results[0].Cost} 
+				a.back(href="/") Back to the previous page
+					
+				
+		#news
+			article.news_div
+				p
+					img#news1.inews(src='images/yoga1.jpg', align='left', alt='Yoga')
+				p
+					h2 Why yoga is good for health?
+				p
+					| Duis leo. Sed fringilla mauris sit amet nibh. 
+					br
+					|  Donec sodales sagittis magna.
+				div(href='#')
+					button.b
+						| Know more
+			article.news_div1
+				p
+					img.inews_2(src='images/cardio1.jpg', align='right', alt='Cardio')
+				p.text
+					h2 Cardio: Facts and Myths
+					|           Praesent elementum justo in pellentesque posuere.
+					|           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+					|           Morbi sit amet urna eget neque placerat rhoncus id euismod tortor.
+					|           Morbi sit amet ex finibus est feugiat placerat.
+					|           Aenean vitae rhoncus mi, sed bibendum nibh.
+				div(href='#')
+					button.b
+						| Know more
+		.main_trains
+				h2#trains.trains_h2 Our trains
+					.trains
+						figure
+							.img.img1
+							figcaption
+							h4 Yoga
+							p.fg
+								| In hac habitasse platea dictumst. Suspendisse et euismod elit.  Nam et sollicitudin tellus.
+							.podpis
+								a(href='#')
+									button.b
+										| Know more
+						figure
+							.img.img2
+							figcaption
+							h4 Cardio
+							p.fg
+								| In hac habitasse platea dictumst.  Suspendisse et euismod elit. Nam et sollicitudin tellus.
+							.podpis
+								a(href='#')
+									button.b
+										| Know more
+						figure
+							.img.img3
+							figcaption
+							h4 Body sculpting
+							p.fg
+								| In hac habitasse platea dictumst. Suspendisse et euismod elit. Nam et sollicitudin tellus.
+							.podpis
+								a(href='#')
+									button.b
+										| Know more
+		.main_trainers
+			.trainers_blocks
+				h2#team.trainers Our team
+				.block_form
+					.wrapper
+						input#slide1(type='radio', name='point', checked='')
+						input#slide2(type='radio', name='point')
+						input#slide3(type='radio', name='point')
+						input#slide4(type='radio', name='point')
+						input#slide5(type='radio', name='point')
+						.slider
+							.slides.slide1
+								p.text1
+									| Василий Пупкин 
+									br
+									|  Тренер по персональным занятиям
+							.slides.slide2
+								p.text1
+									| Катерина Мнимова 
+									br
+									|  Тренер по занятиям йогой
+							.slides.slide3
+								p.text1
+									| Василий Пупкин 
+									br
+									|  Тренер по персональным занятиям
+							.slides.slide4
+									| Катерина Мнимова 
+									br
+									|  Тренер по занятиям йогой
+							.slides.slide5
+								p.text1
+									| Василий Пупкин 
+									br
+									|  Тренер по персональным занятиям
+						.controls
+							label(for='slide1')
+							label(for='slide2')
+							label(for='slide3')
+							label(for='slide4')
+							label(for='slide5')
+					form.form1(action='/registertrainer', method='post' id='formt')
+						h2 You can join us!
+						fieldset
+							p
+								
+								input(class="reg", type='text', required='', name='Name' placeholder="Name")
+							p
+								
+								input(class="reg", type='text', required='', name='Surname' placeholder="Surname")
+							p
+								
+								input(class="reg", type='email', required='', name='Email' placeholder="E-mail")
+							p
+								
+								input(class="reg", type='tel', required='', name='Telephone' placeholder="Telephone")
+							p
+								label Tell us about yourself: 
+							p
+								textarea(name='Abouttrainer' plaseholder="Tell us about yourself")
+							p
+							p
+								button(type='submit', name='button', id="button1") I want to be a trainer
+								button(type='reset', name='button') Reset
+							p
+								button(type='submit', name='button', id="button1") Go to
+							script.
+								document.getElementById("formt").onsubmit = function() {myFunction()};
+								function myFunction() {
+									alert('Your form was send!')
+								}
+																
+		
+	
+	footer
+		#contacts.footer_blocks
+			.footer_text
+				img.logo1(src='images/спортибухло.svg', width='140', height='140', alt='Logo')
+				.text2
+					| Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+			#list.list
+					p.title1 Quick links
+						p
+							ul.block_1
+								li
+									a(href='#top') Home
+								li
+									a(href='#news1') Recent news
+								li
+									a(href='#trains') Trains
+								li
+									a(href='#team') Our team
+								li
+									a(href='#contacts') Contact us
+			.contacts
+					p.title1 Contacts us
+						p
+							ul.block_1
+								li
+									div
+										p
+											img.contacts_1(src='images/message.svg', width='30', height='30', alt='Mail')
+											|                     dasha.zhitanska@gmail.com
+								li
+									div
+										p
+											img.contacts_1(src='images/phone-call.svg', width='30', height='30', alt='Tel')
+											|                     38(097)037-33-03
+								li
+									div
+										p
+											img.contacts_1(src='images/clock.svg', width='30', height='30', alt='CLock')
+											|                     Mon - Sat : 9AM - 6PM
+							
+		p.by © Made by DZ
+		
+			
