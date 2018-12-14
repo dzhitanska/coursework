@@ -4,7 +4,7 @@ block content
 	#toto
 		a.totop(href='#top')
 			.up.up2
-		a.back(href="/") Back to the previous page
+		
 		#top.top
 			a(href='')
 				img.logo(src='/images/спортибухло.svg', width='170', height='170', alt='Logo')
@@ -25,6 +25,7 @@ block content
 			.title
 				h1._2 COST OF YOUR ABONEMENT 
 					p #{results[0].Cost} 
+				a.back(href="/") Back to the previous page
 					
 				
 		#news
@@ -34,10 +35,10 @@ block content
 				p
 					h2 Why yoga is good for health?
 				p
-					| Duis leo. Sed fringilla mauris sit amet nibh. 
+					| Yoga is a total mind-body workout that combines strengthening and stretching poses with deep
 					br
-					|  Donec sodales sagittis magna.
-				div(href='#')
+					|  breathing and meditation or relaxation.
+				a(href="https://www.webmd.com/fitness-exercise/a-z/yoga-workouts")
 					button.b
 						| Know more
 			article.news_div1
@@ -45,12 +46,8 @@ block content
 					img.inews_2(src='images/cardio1.jpg', align='right', alt='Cardio')
 				p.text
 					h2 Cardio: Facts and Myths
-					|           Praesent elementum justo in pellentesque posuere.
-					|           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-					|           Morbi sit amet urna eget neque placerat rhoncus id euismod tortor.
-					|           Morbi sit amet ex finibus est feugiat placerat.
-					|           Aenean vitae rhoncus mi, sed bibendum nibh.
-				div(href='#')
+					|           All cardio and no strength isn't just boring, it may cause you to burn fewer calories overall. Strength training builds lean muscle mass, which both increases your metabolism and decreases fat. So the more muscle you build, the more calories you burn on a day-to-day basis. Here's all the science you need to know about burning fat and building muscle.
+				a(href='#')
 					button.b
 						| Know more
 		.main_trains
@@ -61,7 +58,9 @@ block content
 							figcaption
 							h4 Yoga
 							p.fg
-								| In hac habitasse platea dictumst. Suspendisse et euismod elit.  Nam et sollicitudin tellus.
+								|Yoga is a great activity for you if you have diabetes, high blood pressure, 
+								br
+								|high cholesterol, or heart disease. It gives you mind-body awareness.  
 							.podpis
 								a(href='#')
 									button.b
@@ -71,7 +70,9 @@ block content
 							figcaption
 							h4 Cardio
 							p.fg
-								| In hac habitasse platea dictumst.  Suspendisse et euismod elit. Nam et sollicitudin tellus.
+								|Cardio exercise is one of the most important things you can do for your body, 
+								br
+								|whether you want to lose weight, burn fat, or generally improve your health. 
 							.podpis
 								a(href='#')
 									button.b
@@ -81,7 +82,9 @@ block content
 							figcaption
 							h4 Body sculpting
 							p.fg
-								| In hac habitasse platea dictumst. Suspendisse et euismod elit. Nam et sollicitudin tellus.
+								|The muscle building process is not as complicated as it's made out to be. 
+								br
+								|Here are the basics that will help you get on track and maximizing your progress.
 							.podpis
 								a(href='#')
 									button.b
@@ -99,28 +102,28 @@ block content
 						.slider
 							.slides.slide1
 								p.text1
-									| Василий Пупкин 
+									| Timur Malik 
 									br
-									|  Тренер по персональным занятиям
+									| Personal trainer
 							.slides.slide2
 								p.text1
-									| Катерина Мнимова 
+									| Vika Naumenko 
 									br
-									|  Тренер по занятиям йогой
+									| Personal trainer
 							.slides.slide3
 								p.text1
-									| Василий Пупкин 
+									| Andrey Gor
 									br
-									|  Тренер по персональным занятиям
+									| Personal trainer
 							.slides.slide4
-									| Катерина Мнимова 
+									| Valya Trener 
 									br
-									|  Тренер по занятиям йогой
+									| Personal trainer
 							.slides.slide5
 								p.text1
-									| Василий Пупкин 
+									| Sasha Sapel 
 									br
-									|  Тренер по персональным занятиям
+									| Personal trainer
 						.controls
 							label(for='slide1')
 							label(for='slide2')
@@ -149,9 +152,8 @@ block content
 							p
 							p
 								button(type='submit', name='button', id="button1") I want to be a trainer
-								button(type='reset', name='button') Reset
 							p
-								button(type='submit', name='button', id="button1") Go to
+								button(type='reset', name='button') Reset
 							script.
 								document.getElementById("formt").onsubmit = function() {myFunction()};
 								function myFunction() {
@@ -159,13 +161,12 @@ block content
 								}
 																
 		
-	
 	footer
 		#contacts.footer_blocks
 			.footer_text
 				img.logo1(src='images/спортибухло.svg', width='140', height='140', alt='Logo')
 				.text2
-					| Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+					|Fitness does not only refer to being physically fit, but also refers to a person’s mental state as well. If a|person is physically fit, but mentally unwell or troubled, he or she will not be able to function optimally. |Mental fitness can only be achieved if your body is functioning well. You can help relax your own mind and |eliminate stresses by exercising regularly and eating right.
 			#list.list
 					p.title1 Quick links
 						p
@@ -178,6 +179,8 @@ block content
 									a(href='#trains') Trains
 								li
 									a(href='#team') Our team
+								li
+									a(href='#register') Registration
 								li
 									a(href='#contacts') Contact us
 			.contacts
@@ -201,5 +204,4 @@ block content
 											|                     Mon - Sat : 9AM - 6PM
 							
 		p.by © Made by DZ
-		
-			
+	
