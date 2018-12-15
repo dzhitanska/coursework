@@ -52,15 +52,43 @@ select {
   border-radius: 5px;
 }
 h1._2{
-   font-size: 50px;
-  padding-top: 253px;
+  font-size: 50px;
+  padding-top: 80px;
+  margin-left: 430px;
+  color:white;
 }
 a.back{
   font-size: 25px;
-  margin-top: -25px;
+ 
   text-decoration: underline;
   /*margin-left: 600px;*/
+ 
+
 }
+.back {
+   margin-top: 60px;
+    margin-left: 240px;
+}
+p._t1{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 620px;
+  padding-top: 100px;
+  color:white;
+}
+p._t{
+  font-size: 18px;
+  margin-left: 200px;
+  color:white;
+  font-weight: bolder;
+
+}
+.all {
+  display: flex;
+  justify-content: center;
+  margin-left: -190px;
+}
+
 /*----------------------------------*/
 
 

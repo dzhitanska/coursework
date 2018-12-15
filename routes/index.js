@@ -66,10 +66,11 @@ var len = (Services1).length
 
 
 router.get('/cost', function(req, res, next) {
-	
-	connection.query('SELECT Cost_of_abonement() AS Cost', function(error, results,fields){
-		// var cost = results;
+connection.query(
+'SELECT Cost_of_abonement() AS Cost; SELECT Name as name, Surname as surname, Email as email, Telephone as number, Service as service FROM CLients_inf', [1,2],
+		function(error, results,fields){
 		console.log(results);
+		connection.query('CALL Cost_of_abonement()')
 		if(error) throw error
 		res.render('index2',{
 			results
@@ -78,5 +79,6 @@ router.get('/cost', function(req, res, next) {
 
 
 });
+
 
 module.exports = router;

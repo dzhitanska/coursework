@@ -21,11 +21,21 @@ block content
 							a(href='#team') Our team
 						li
 							a(href='#contacts') Contact us
-					p
-			.title
-				h1._2 COST OF YOUR ABONEMENT 
-					p #{results[0].Cost} 
-				a.back(href="/") Back to the previous page
+			p
+				h1._2 Thank you for registration!
+			p._t1 Your information 
+			.all
+				._1
+					p._t Cost of abonement: #{results[0][0].Cost} UAH
+					p._t Your name: #{results[1][0].name}
+					p._t Your surname: #{results[1][0].surname}
+				._2
+					p._t Your e-mail: #{results[1][0].email}
+					p._t Your number: #{results[1][0].number}
+					p._t Your service(s): #{results[1][0].service}
+					
+			.back
+				a.back(href="/") Back to the previous page and register again
 					
 				
 		#news
