@@ -136,16 +136,16 @@ block content
 						fieldset
 							p
 								
-								input(class="reg", type='text', required='', name='Name' placeholder="Name")
+								input(class="reg", type='text', required='' name='Name' placeholder="Name", maxlength=30 pattern="^[А-Яа-яЁё\s]+$ [^0-9]")
 							p
 								
-								input(class="reg", type='text', required='', name='Surname' placeholder="Surname")
+								input(class="reg", type='text', required='', name='Surname' placeholder="Surname" pattern="^[А-Яа-яЁё\s]+$ [^0-9]" maxlength=40)
 							p
 								
-								input(class="reg", type='email', required='', name='Email' placeholder="E-mail")
+								input(class="reg", type='email', required='', name='Email' placeholder="E-mail" maxlength=40)
 							p
 								
-								input(class="reg", type='tel', required='', name='Telephone' placeholder="Telephone")
+								input(class="reg", type='tel', required='', name='Telephone' placeholder="380(xx)-xxx-xx-xx" pattern="380-([0-9]{2})-[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength=12)
 							p
 								label Tell us about yourself: 
 							p
@@ -167,16 +167,16 @@ block content
 				fieldset
 					p
 						//- label Name: 
-						input(class="reg", type='text', required='', name='username' placeholder="Name")
+						input(class="reg", type='text', required='', name='username' placeholder="Name" pattern="^[А-Яа-яЁё\s]+$ [^0-9]" maxlength=30)
 					p
 						//- label Surname: 
-						input(class="reg", type='text', required='', name='usersurname' placeholder="Surname")
+						input(class="reg", type='text', required='', name='usersurname' placeholder="Surname" pattern="[А-Яа-яЁё\s]+$" maxlength=30)
 					p
 						//- label Email: 
-						input(class="reg", type='email', required='', , name='useremail' placeholder="E-mail")
+						input(class="reg", type='email', required='', , name='useremail' placeholder="E-mail" maxlength=30)
 					p
 						//- label Telephone: 
-						input(class="reg", type='tel', required='', name='usertelephone' placeholder="Telephone")
+						input(class="reg", type='tel', required='', name='usertelephone' placeholder="380(xx)-xxx-xx-xx" maxlength=12)
 					
 					
 					p
@@ -195,13 +195,13 @@ block content
 						|Choose service(s) for 
 						br 
 						|your season ticket:
-				.checkbox(name="serv")
+				.checkbox(name="serv", required='')
 					p
 						div
 							label
 								p
 									label(title='400UAH')
-									input#service(type='checkbox' name='service', value="1" )
+									input#service(type='checkbox' name='service', value="1" checked)
 									| Gym
 							label
 								p
