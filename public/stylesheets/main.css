@@ -34,14 +34,16 @@ a.totop{
   color: black;
 }
 div.up{
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   -webkit-border-radius: 9px;
   right: 30px;
   margin-top: 600px;
   position: fixed;  
   background: #2B203F;
   background-image: url("картиночки/up-arrow.png");
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.5;
 }
 div.up:hover{
@@ -72,13 +74,13 @@ a.back{
 p._t1{
   font-size: 30px;
   font-weight: bold;
-  margin-left: 620px;
+  margin-left: 650px;
   padding-top: 100px;
   color:white;
 }
 p._t{
   font-size: 18px;
-  margin-left: 200px;
+  margin-left: 230px;
   color:white;
   font-weight: bolder;
 
@@ -86,7 +88,7 @@ p._t{
 .all {
   display: flex;
   justify-content: center;
-  margin-left: -190px;
+  margin-right: 200px;
 }
 
 /*----------------------------------*/

@@ -136,16 +136,16 @@ block content
 						fieldset
 							p
 								
-								input(class="reg", type='text', required='' name='Name' placeholder="Name", maxlength=30 pattern="^[А-Яа-яЁё\s]+$ [^0-9]")
+								input(class="reg", type='text', required='' name='Name' placeholder="Name", maxlength=30 )
 							p
 								
-								input(class="reg", type='text', required='', name='Surname' placeholder="Surname" pattern="^[А-Яа-яЁё\s]+$ [^0-9]" maxlength=40)
+								input(class="reg", type='text', required='', name='Surname' placeholder="Surname" maxlength=40)
 							p
 								
 								input(class="reg", type='email', required='', name='Email' placeholder="E-mail" maxlength=40)
 							p
 								
-								input(class="reg", type='tel', required='', name='Telephone' placeholder="380(xx)-xxx-xx-xx" pattern="380-([0-9]{2})-[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength=12)
+								input(class="reg", type='tel', required='', name='Telephone' placeholder="380(xx)-xxx-xx-xx" maxlength=12)
 							p
 								label Tell us about yourself: 
 							p
@@ -167,10 +167,10 @@ block content
 				fieldset
 					p
 						//- label Name: 
-						input(class="reg", type='text', required='', name='username' placeholder="Name" pattern="^[А-Яа-яЁё\s]+$ [^0-9]" maxlength=30)
+						input(class="reg", type='text', required='', name='username' placeholder="Name" maxlength=30)
 					p
 						//- label Surname: 
-						input(class="reg", type='text', required='', name='usersurname' placeholder="Surname" pattern="[А-Яа-яЁё\s]+$" maxlength=30)
+						input(class="reg", type='text', required='', name='usersurname' placeholder="Surname" maxlength=30)
 					p
 						//- label Email: 
 						input(class="reg", type='email', required='', , name='useremail' placeholder="E-mail" maxlength=30)
