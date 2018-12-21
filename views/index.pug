@@ -7,25 +7,42 @@ block content
 		#top.top
 			a(href='')
 				img.logo(src='/images/спортибухло.svg', width='170', height='170', alt='Logo')
+			div.burgerprukol
+				i.fas.fa-bars
+				ul.dropdown-child2
+							li
+								a(href='#top') Home
+							li
+								a(href='#news1') Recent news
+							li
+								a(href='#trains') Trains
+							li
+								a(href='#team') Our team
+							li
+								a(href='#register') Registration
+							li
+								a(href='#contacts') Contact us
 			nav#menu.menu
 				p
-					ul.block_2
-						li
-							a(href='#top') Home
-						li
-							a(href='#news1') Recent news
-						li
-							a(href='#trains') Trains
-						li
-							a(href='#team') Our team
-						li
-							a(href='#register') Registration
-						li
-							a(href='#contacts') Contact us
+					div.dropdown#dropdown
+						a.mainmenubtn#mainmenubtn MY MENU	
+						ul.block_2.dropdown-child#dropdown-child
+							li
+								a(href='#top') Home
+							li
+								a(href='#news1') Recent news
+							li
+								a(href='#trains') Trains
+							li
+								a(href='#team') Our team
+							li
+								a(href='#register') Registration
+							li
+								a(href='#contacts') Contact us
 					p
 			.title
 				h1 Build your body
-				p 
+				p.tit 
 					|Live in your rhythm!
 					br
 					|Be fit!
@@ -131,40 +148,91 @@ block content
 							label(for='slide3')
 							label(for='slide4')
 							label(for='slide5')
-					form.form1(action='/registertrainer', method='post' id='formt')
+					form.form1(action='/registertrainer', method='post' id='formt' name='f1')
 						h2 You can join us!
 						fieldset
 							p
 								
-								input(class="reg", type='text', required='' name='Name' placeholder="Name", maxlength=30 )
+								input(class="reg", type='text', required='', name='Name' placeholder="Name", maxlength=30, id='name')
+								span(style='color:red' id='name') 
 							p
 								
-								input(class="reg", type='text', required='', name='Surname' placeholder="Surname" maxlength=40)
+								input(class="reg", type='text', required='', name='Surname' placeholder="Surname" maxlength=40 id="surname")
 							p
 								
-								input(class="reg", type='email', required='', name='Email' placeholder="E-mail" maxlength=40)
+								input(class="reg", type='email', required='', name='Email' placeholder="E-mail" maxlength=40 id='email')
 							p
 								
-								input(class="reg", type='tel', required='', name='Telephone' placeholder="380(xx)-xxx-xx-xx" maxlength=12)
+								input(class="reg", type='tel', required='', name='Telephone' placeholder="380(xx)-xxx-xx-xx" maxlength=12 id='tel')
 							p
 								label Tell us about yourself: 
 							p
 								textarea(name='Abouttrainer' plaseholder="Tell us about yourself")
 							p
 							p
-								button(type='submit', name='button', id="button1") I want to be a trainer
+								button(type='submit', name='button', id="button1" onsubmit='validate()') I want to be a trainer
 							p
 								button(type='reset', name='button') Reset
 							script.
-								document.getElementById("formt").onsubmit = function() {myFunction()};
-								function myFunction() {
-									alert('Your form was send!')
-								}
-																
+								//- document.getElementById("formt").onsubmit = function() {myFunction()};
+								//- function myFunction() {
+								//- 	alert('Your form was send!')
+								//- }
+								//- function validate(){
+
+								//- var x=document.forms['f1']['Name'].value;
+								//- var y=document.forms['f1']['Surname'].value;
+								//- var z=document.forms['f1']['Email'].value;
+								//- var f=document.forms['f1']['Telephone'].value;
+								
+								//- if (x.length==0){
+								//- 	document.getElementById('name').innerHTML='*данное поле обязательно для заполнения';
+								//- 	return false;
+								//- }
+								//- if (y.length==0){
+								//- 	document.getElementById('surname').innerHTML='*данное поле обязательно для заполнения';
+								//- 	return false;
+								//- }
+								//- if (z.length==0){
+								//- 	document.getElementById('email').innerHTML='*данное поле обязательно для заполнения';
+								//- 	return false;
+								//- }
+								//- if (f.length==0){
+								//- 	document.getElementById('tel').innerHTML='*данное поле обязательно для заполнения';
+								//- 	return false;
+								//- }
+								
+								//- at=y.indexOf("@");
+								//- dot=y.indexOf(".");
+								
+								//- if (at<1 || dot <1){
+								//- 	document.getElementById('email').innerHTML='*email введен не верно';
+								//- 	return false;
+								//- 	}
+								//- }
+								//- //- $("button[id='button1']").click(function (){	  
+								//- //- var name = $("input[name='Name']").val().trim();
+								//- //- var sname = $("input[name='Surname']").val().trim();
+								//- //- var email = $("input[name='Email']").val().trim();
+								//- //- var tel = $("input[name='Telephone']").val().trim();
+								//- //- var error_arr = [];
+								//- //- if(name.length == 0) error_arr.push('Name');
+								//- //- if(sname.length == 0) error_arr.push('Surname');
+								//- //- if(email.length == 0) error_arr.push('E-mail');	  
+								//- //- if(tel.length == 0) error_arr.push('Number');
+								//- //- if(error_arr.length > 0){
+								//- //- alert("These fields are required:\n" + error_arr.join(', '));
+								//- //- return false;
+								//- //- }else{
+								//- //- console.log("Ошибок нет!");
+								//- //- }  	  
+								//- //- });	
+																	
 		.block_register
 			form#register.form2(action='/registeruser', method='post')
 				h2 Register here!
 				fieldset
+					
 					p
 						//- label Name: 
 						input(class="reg", type='text', required='', name='username' placeholder="Name" maxlength=30)
@@ -251,6 +319,7 @@ block content
 				}, 1000);
 				document.getElementById("register").submit();
 				}
+			
 				
 	footer
 		#contacts.footer_blocks

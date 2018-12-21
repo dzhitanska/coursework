@@ -20,7 +20,7 @@
     margin-left: 4px;
   }
   form.form2{
-    margin-left: -40px;
+    margin-left: -20px;
   }
   div.block_register{
     margin-top: 100px;
@@ -40,5 +40,101 @@
   }
   div.up{
     right: 60px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  p.fg{
+    display: none;
+  }
+  div.trains{
+    flex-direction: column;
+  }
+  h2.trains_h2{
+    padding-top: 10px;
+    font-size: 35px;
+  }
+  button.b{
+    display: none;
+  }
+  div.main_trains{
+    height: 1000px;
+  }
+  img.logo{
+    height: 100px;
+    width: 100px;
+  }
+  h1{
+    font-size: 36px;
+  }
+  p.tit{
+    font-size: 30px;
+  }
+  div.top{
+  padding-bottom: 100px;
+  }
+  div.title{
+    padding-left: 50px;
+  }
+  div.main_trainers{
+    display: none;
+  }
+  div.block_register{
+    flex-direction: column;
+    height: 650px;
+  }
+  img.service_img{
+    display: none;
+  }
+  form.form2{
+    margin-left: 0px;
+    text-align: center;
+  }
+  form#register2{
+    /*margin-left: 0px;*/
+    padding: 0px;
+    width: 83%;
+    text-align: center;
+  }
+  div.up2{
+    display: none;
+  }
+  div.footer_text{
+    display: none;
+  }
+  input#but{
+    text-align: center;
+  }
+  div.footer_blocks{
+    margin-left: 0px;
+    flex-direction: column;
+  }
+  div.contacts{
+    padding: 0px;
+    margin-left: -15px;
+    /*margin-top: -200px;*/
+  }
+  .burgerprukol{
+    z-index: 4123;
+    cursor: pointer;
+    background:;
+    /*width: 50px;*/
+    /*height: 50px;*/
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: white;
+  }
+  .burgerprukol{
+    padding: 10px;
+ 
+    background: #d83f87;
+  }
+  .menu{
+    display: none;
+  }
+  footer{
+    height:800px;
   }
 }

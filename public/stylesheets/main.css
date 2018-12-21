@@ -104,11 +104,17 @@ div.top{
 }
 
 img.logo {
-  margin-left: 40px;
+  top: 0;
+  /*margin-left: 40px;*/
+  height: 170px;
   position: absolute;
 }
 
-
+.dropdown-child2{
+     list-style: none;
+     margin: 0px;
+     padding: 0px;
+}
 div.title {
   padding-left: 200px;
   font-size: 33pt;
@@ -560,5 +566,25 @@ p.title1{
     transition: 0.35s ease-in-out;
     font-weight: 700;
 }
-
-
+.mainmenubtn{
+  cursor: pointer;
+}
+.dropdown{
+  text-align: center;
+  font-size: 20px;
+    border: 2px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.dropdown-child{
+  display: none;
+}
+form input:valid{
+  border-bottom-color: green;
+}
+form input:invalid{
+  border-bottom-color: red;
+}
+.dropdown-child2{
+  display: none;
+}
